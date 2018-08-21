@@ -1,0 +1,4 @@
+<!--pages/time.wxml-->
+<text :endTime="endTime" :callback="callback" :endText="endText">
+</text>
+

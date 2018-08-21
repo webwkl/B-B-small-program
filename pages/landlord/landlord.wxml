@@ -1,0 +1,58 @@
+<!--pages/landlord/landlord.wxml-->
+<view class='landlord_top'>
+ <image class='landlord_photo' src="{{img}}"></image>
+ <text class='text_name'>{{lanlord_name}}</text>
+ <text class='text_ads'>{{add_time}} {{area_id}}</text>
+</view>
+<view class='introduce'>
+  <text class='introduce_title'>关于{{lanlord_name}}</text>
+  <text class="introduce_text {{isFold?'hide':'show'}}" >{{introduce}}</text>
+  <view class="look_all {{isFold?'rgba':''}}" bindtap="showAll">{{isFold?'查看全部':'收起'}}</view>
+</view>
+<view class='evaluate'>
+  <view class='evaluate_top'>
+    <view class='evaluate_l'>
+     <block>
+        <image wx:for="{{fen}}" src="/resource/images/landlord/small_start.png" class='start'></image>
+        <image class='start' src="/resource/images/landlord/s_ban.png" wx:if="{{ban}}" ></image>
+        <image wx:for="{{hui}}" src="/resource/images/landlord/start_cc.png" class='start'></image>
+        <image class='start' src="/resource/images/landlord/bj_fen.png" style='width:66rpx;margin-left:22rpx;'></image>
+     </block>
+     <text class='fen'>{{items.fen}}</text>
+    </view>
+    <text class='evaluate_r'>阅读全部{{items.num}}条评价  ></text>
+  </view>
+  <view class='evaluate_bottom'>
+    <text class='b_top'>{{items.text}}</text>
+    <view class='b_r'>
+     <text class='text_br'>匿名\n{{items.date}}</text>
+     <image class='landlord_sphoto' src="{{items.url}}"></image>
+    </view>
+  </view>
+</view>
+<view class='message'>
+  <view class='message_li'>
+   <text>房源信息</text>
+   <text>已验证</text>
+  </view>
+  <view class='message_li' style='border:none'>
+   <text>个人信息</text>
+   <text>已验证</text>
+  </view>
+</view>
+<view class='landlord_detail'>
+  <text class='detail_title'>其他房源</text>
+  <view class='landlord_content'>
+    <block wx:for="{{house}}" wx:for-item="list">
+      <view class='landlord_content_li'>
+      <image class='house' src="{{list.url}}"></image>
+      <view class='house_texts'>
+      <text class='text_l'>{{list.title}}</text>
+      <text class='text_r'>{{list.num}}</text>
+      </view>
+      <text class='text_num'>民居·宜居{{list.people}}人·{{list.count}}条评价</text>
+      </view>
+    </block>
+    
+  </view>
+</view>

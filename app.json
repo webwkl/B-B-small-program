@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/landlord/landlord",
+    "pages/more/more",
+    "pages/login/login",
+    "pages/facility/facility",
+    "pages/news/systemnews/systemnews",
+    "pages/news/news",
+    "pages/allevaluation/allevaluation",
+    "pages/fillorder/fillorder",
+    "pages/star/index",
+    "pages/switchcity/switchcity",
+    "pages/integral/integral",
+    "pages/integral/integrallist/integrallist",
+    "pages/my/my",
+    "pages/calendar/index",
+    "pages/personallook/personallook",
+    "pages/listdetail/listdetail",
+    "pages/list/list",
+    "pages/filter/filter",
+    "pages/addoccupantdetail/addoccupantdetail",
+    "pages/addoccupant/addoccupant",
+    "pages/system/system",
+    "pages/evaluatedetail/evaluatedetail",
+    "pages/housingdetails/housingdetails"
+    
+  ],
+  "window": {
+    "navigationBarTitleText": "青城",
+    "navigationBarBackgroundColor": "#f54d28"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#f54d28",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "resource/images/toppage.png",
+        "selectedIconPath": "resource/images/toppage_link.png"
+      },
+      {
+        "text": "消息",
+        "pagePath": "pages/news/news",
+        "iconPath": "resource/images/news.png",
+        "selectedIconPath": "resource/images/news_link.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "resource/images/mine.png",
+        "selectedIconPath": "resource/images/mine_link.png"
+      }
+    ]
+  }
+}

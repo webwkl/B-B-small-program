@@ -1,0 +1,144 @@
+/* pages/my/list.wxss */
+page{
+background-color: #f7f7f7;
+}
+.swiper-tab {
+  width: 100%;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  text-align: center;
+  line-height: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.swiper-tab-list {
+  font-size: 28rpx;
+  display: inline-block;
+  width: 20%;
+  color: #999999;
+  position: relative;
+}
+.swiper-tab-list .icon{
+ position: absolute;
+ width: 30rpx;
+	height: 30rpx;
+	background-color: #f65d40;
+  border-radius: 50%;
+  top:10rpx;
+  right: 15rpx;
+  color: #fff;
+  line-height: 30rpx;
+  text-align: center;
+  font-family: MicrosoftYaHei;
+	font-size: 22rpx;
+}
+.on {
+ color: #f65d40;
+  border-bottom: 5rpx solid #f65d40;
+}
+.list_li{
+  width: 100%;
+  height: 348rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  padding-top: 49rpx;
+}
+.li_top{
+  display: flex;
+   flex-direction: row;
+  justify-content: space-between;
+  height: 30rpx;
+  align-items: center;
+  margin-bottom:30rpx;
+}
+.li_top text{
+  height: 30rpx;
+   font-family: MicrosoftYaHei;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30rpx;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.list_btn{
+	width: 100rpx;
+	height: 40rpx;
+	background-color: #f65d40;
+	border-radius: 20rpx;
+  font-family: MicrosoftYaHei;
+	font-size: 24rpx;
+	line-height: 40rpx;
+	color: #ffffff;
+  text-align: center;
+}
+.middle{
+    display: flex;
+   flex-direction: row;
+  height: 157rpx;
+  align-items: center;
+   border-bottom: 1rpx solid #eee;
+   margin-bottom: 20rpx;
+}
+.middle .m_image{
+  width: 180rpx;
+  height: 125rpx;
+  background-color: #ccc;
+  margin-right: 19rpx;
+ 
+}
+ .m_left text{
+  display: block;
+  	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+ }
+ .m_left .text_t{
+    font-family: MicrosoftYaHei;
+	  font-size: 26rpx;
+  	color: #666;
+  }
+ .m_left .text_m{
+   font-family: MicrosoftYaHei;
+	 font-size: 26rpx;
+	 color: #999999;
+   margin: 13rpx 0;
+ }
+ .m_left .text_b{
+	font-family: MicrosoftYaHei;
+	font-size: 28rpx;
+	line-height: 24rpx;
+	color: #f54d28;
+ }
+ .list_btns{
+   position: absolute;
+   right: 30rpx;
+   display: flex;
+   justify-content: flex-end;
+ }
+ .list_li .list_button{
+   width: 120rpx;
+	height: 40rpx;
+	border-radius: 8rpx;
+	border: solid 1rpx #f54d28;
+  margin-right: 0 ;
+  line-height: 40rpx;
+  font-family: MicrosoftYaHei;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #f54d28;
+  text-align: center;
+  margin-left:10rpx;
+  
+ }
+ .time{
+   height: 40rpx;
+  font-family: MicrosoftYaHei;
+	font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40rpx;
+	color: #666666;
+ }

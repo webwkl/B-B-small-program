@@ -1,0 +1,24 @@
+<!--pages/addoccupant/11.wxml-->
+<!-- 添加入住人 -->
+<view class='addoccupant_top'>
+   <navigator url='/pages/addoccupantdetail/addoccupantdetail'>
+    <image src="/resource/images/add.png" ></image>
+   </navigator>
+   <text>添加入住人</text>
+</view>
+<view class='addoccupant_content'>
+ <block wx:for="{{items}}" wx:key="index">
+  <view class='addoccupant_content_li'>
+  <checkbox-group bindchange="checkboxChange">
+   <view class='checkbox'>
+    <checkbox value="{{item.name}}"  checked="{{item.checked}}" color="#f54d28"/>
+    <text class='addoccupant_text1'>{{item.name}}</text>
+    <text class='addoccupant_text2'>{{item.phone}}\n{{item.idcard}}</text>
+   </view>
+   </checkbox-group>
+   <image src="/resource/images/eadit.png"></image>
+   
+  </view>
+  </block>
+</view>
+<view class='addoccupant_btn'>添加</view>

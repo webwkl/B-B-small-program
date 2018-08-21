@@ -1,0 +1,81 @@
+<view class='star'>
+  <text class='tit'>干净整洁</text>
+  <view class='ding'>
+      <block wx:for="{{stars}}" wx:key='{{numbers}}'>
+      <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+        <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+        <view class="item" style="left:30rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+      </image>
+    </block>
+  </view>
+</view>
+<view class='star'>
+  <text class='tit'>设施环境</text>
+  <view class='ding'>
+      <block wx:for="{{stars}}" wx:key='{{numbers}}'>
+      <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+        <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+        <view class="item" style="left:30rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+      </image>
+    </block>
+  </view>
+</view>
+<view class='star'>
+  <text class='tit'>位置交通</text>
+  <view class='ding'>
+      <block wx:for="{{stars}}" wx:key='{{numbers}}'>
+      <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+        <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+        <view class="item" style="left:30rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+      </image>
+    </block>
+  </view>
+</view>
+<view class='star'>
+  <text class='tit'>如实描述</text>
+  <view class='ding'>
+      <block wx:for="{{stars}}" wx:key='{{numbers}}'>
+      <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+        <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+        <view class="item" style="left:30rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+      </image>
+    </block>
+  </view>
+</view>
+<view class='star'>
+  <text class='tit'>性价比</text>
+  <view class='ding'>
+      <block wx:for="{{stars}}" wx:key='{{numbers}}'>
+      <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+        <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+        <view class="item" style="left:30rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+      </image>
+    </block>
+  </view>
+</view>
+<view class='upload'>
+    <scroll-view scroll-x class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files">
+              <block wx:for="{{pics}}" wx:for-item="image">
+                <view class="weui-uploader__file">
+                  <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                </view>
+              </block>
+            </view>
+            <!-- isShow 这个是判断是否进行触发点隐藏操作-->
+            <image class="weui-uploader__input-box {{isShow?'true':'hideTrue'}}" src='{{image}}'>
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </image>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+</view>
+<textarea placeholder="5分好评+超过50字的文字评价+图片，可获得300积分哦" name="textarea" class='textarea'/>
+<view class='flex bottom'>
+  <view class='bottom_left'>取消</view>
+  <view class='bottom_right' >发布</view>
+</view>

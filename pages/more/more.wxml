@@ -1,0 +1,81 @@
+<!--pages/housingdetails/more/more.wxml-->
+
+<view class='page_con'>
+   <text>居家</text>
+   <view class='page_img'>
+    <view class='img_con'  wx:for="{{imgList.home}}" wx:key="item">
+      <view wx:if="{{status}}"></view>
+      <view wx:else><image src='{{url}}/Public/images/icon/{{item.image}}.png'></image><text>{{item.name}}</text></view>
+    </view>  
+   </view>
+</view>
+
+<view class='page_con'>
+   <text>卫浴</text>
+   <view class='page_img'>
+    <view class='img_con'  wx:for="{{imgList.bathroom}}" wx:key="item">
+      <view wx:if="{{status}}"></view>
+      <view wx:else><image src='{{url}}/Public/images/icon/{{item.image}}.png'></image><text>{{item.name}}</text></view>
+    </view>  
+   </view>
+</view>
+
+<view class='page_con'>
+   <text>餐厨</text>
+   <view class='page_img'>
+    <view class='img_con'  wx:for="{{imgList.dining_kitchen}}" wx:key="item">
+      <view wx:if="{{status}}"></view>
+      <view wx:else><image src='{{url}}/Public/images/icon/{{item.image}}.png'></image><text>{{item.name}}</text></view>
+    </view>  
+   </view>
+</view>
+
+<view class='page_con'>
+   <text>娱乐</text>
+   <view class='page_img'>
+    <view class='img_con'  wx:for="{{imgList.happy}}" wx:key="item">
+      <view wx:if="{{status}}"></view>
+      <view wx:else><image src='{{url}}/Public/images/icon/{{item.image}}.png'></image><text>{{item.name}}</text></view>
+    </view>  
+   </view>
+</view>
+
+<view class='page_con'>
+   <text>安全</text>
+   <view class='page_img'>
+    <view class='img_con'  wx:for="{{imgList.safety}}" wx:key="item">
+      <view wx:if="{{status}}"></view>
+      <view wx:else><image src='{{url}}/Public/images/icon/{{item.image}}.png'></image><text>{{item.name}}</text></view>
+    </view>  
+   </view>
+</view>
+
+<view class='page_con'>
+   <text>建筑</text>
+   <view class='page_img'>
+    <view class='img_con'  wx:for="{{imgList.building}}" wx:key="item">
+      <view wx:if="{{status}}"></view>
+      <view wx:else><image src='{{url}}/Public/images/icon/{{item.image}}.png'></image><text>{{item.name}}</text></view>
+    </view>  
+   </view>
+</view>
+
+<view class='page_con'>
+   <text>周边（500米）</text>
+   <view class='page_img'>
+    <view class='img_con'  wx:for="{{imgList.periphery}}" wx:key="item">
+      <view wx:if="{{status}}"></view>
+      <view wx:else><image src='{{url}}/Public/images/icon/{{item.image}}.png'></image><text>{{item.name}}</text></view>
+    </view>  
+   </view>
+</view>
+
+<view class='page_con'>
+   <text>其他</text>
+   <view class='page_img'>
+    <view class='img_con'  wx:for="{{imgList.other}}" wx:key="item">
+      <view wx:if="{{status}}"></view>
+      <view wx:else><image src='{{url}}/Public/images/icon/{{item.image}}.png'></image><text>{{item.name}}</text></view>
+    </view>  
+   </view>
+</view>

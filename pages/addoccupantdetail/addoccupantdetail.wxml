@@ -1,0 +1,21 @@
+<!--pages/addoccupantdetail/addoccupantdetail.wxml-->
+<view class='addoccupantdetail'>
+  <view class='addoccupantdetail_li'>
+  <text>姓名</text>
+  <input name="input" class='addoccupantdetail_text1' placeholder="必填" value="{{form.name}}" />
+  </view>
+  <view class='addoccupantdetail_li'>
+  <picker bindchange="bindPickerChange" class='addoccupantdetail_text1' style='color:#666' value="{{index}}" range="{{array}}" >
+          <view class="picker">
+            {{array[index]}}
+            <image class='down' src="/resource/images/down.png"></image>
+          </view>
+        </picker>
+  <input name="input" class='addoccupantdetail_text1' placeholder="必填" value="{{form.idcard}}" />
+  </view>
+  <view class='addoccupantdetail_li' style='border:none'>
+  <text>手机号</text>
+  <input name="input" class='addoccupantdetail_text1' placeholder="必填" value="{{form.phone}}" />
+  </view>
+</view>
+<view class='addoccupant_btn'>添加</view>

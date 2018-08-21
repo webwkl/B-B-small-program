@@ -1,0 +1,78 @@
+/* pages/addoccupant/11.wxss */
+page{
+  background: #f7f7f7
+}
+.addoccupant_top{
+  height: 130rpx;
+  widows: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.addoccupant_top text{
+font-family: MicrosoftYaHei;
+	font-size: 32rpx;
+	line-height: 46rpx;
+	color: #f54d28;
+}
+.addoccupant_top image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.addoccupant_content{
+  width: 100%;
+  height: auto;
+  padding: 0 30rpx;
+  background: #fff;
+  margin-bottom: 100rpx;
+}
+.addoccupant_content_li{
+  width: 690rpx;
+  height: 175rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.addoccupant_content_li:last-child{
+  border: none
+}
+.checkbox{
+  display: flex;
+  align-items: center;
+}
+.addoccupant_content_li image{
+  width: 26rpx;
+  height: 26rpx;
+}
+.addoccupant_content_li text{
+  font-family: MicrosoftYaHei;
+	font-size: 28rpx;
+	line-height: 46rpx;
+	color: #666666;
+}
+.addoccupant_text1{
+  margin-left: 35rpx;
+  margin-top: -40rpx;
+}
+.addoccupant_content_li .addoccupant_text2{
+  margin-left: 38rpx;
+  text-align: left;
+  color: #999;
+  }
+.addoccupant_btn{
+  width: 690rpx;
+  margin: 0 auto;
+  height: 90rpx;
+	background-color: #f54d28;
+	border-radius: 4rpx;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+  font-family: MicrosoftYaHei;
+	font-size: 32rpx;
+}

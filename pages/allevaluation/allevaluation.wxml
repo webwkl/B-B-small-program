@@ -1,0 +1,73 @@
+<view class='evaluatedetail'>
+  <view class='evaluatedetail_top'>
+      <view class='top_l'>
+      <text>{{item.title}}</text>
+      </view>
+      <view class='evaluate_r'>
+          <image wx:for="{{fen}}" wx:key="index" src="/resource/images/landlord/small_start.png" class='start'></image>
+          <image class='start' src="/resource/images/landlord/s_ban.png" wx:if="{{ban}}" ></image>
+          <image wx:for="{{hui}}" wx:key="index" src="/resource/images/landlord/start_cc.png" class='start'></image>
+          <image class='start bj' src="/resource/images/landlord/bj_fen.png" ></image>
+          <text class='fen'>{{item.fen}}</text>
+      </view>
+  </view>
+  <view class='list'>
+    <view class='score'>
+      <view>卫生</view>
+      <view>5.0分</view>
+    </view>
+    <view class='score'>
+      <view>环境</view>
+      <view>5.0分</view>
+    </view>
+    <view class='score'>
+      <view>交通</view>
+      <view>5.0分</view>
+    </view>
+    <view class='score'>
+      <view>描述如实</view>
+      <view>5.0分</view>
+    </view>
+    <view class='score'>
+      <view>性价比</view>
+      <view>5.0分</view>
+    </view>
+  </view>
+</view>
+<view class='evaluatedetail '>
+    <view class='border_b'>
+        <view class='evaluatedetail_top none'>
+            <view class='top_l'>
+                <image src="{{item.src}}"></image>
+                <text>{{item.name}}</text>
+            </view>
+            <view class='checkin_date'>{{checkin_date}}</view>
+        </view>
+        <view class='leave_message'> {{item.leave_message}}</view>
+    </view>
+    <view class='border_b'>
+        <view class='evaluatedetail_top none'>
+            <view class='top_l'>
+                <image src="{{item.src}}"></image>
+                <text>{{item.name}}</text>
+            </view>
+            <view class='checkin_date'>{{checkin_date}}</view>
+        </view>
+        <view class='leave_message'> {{item.leave_message}}</view>
+    </view>
+    <view class='border_b'>
+        <view class='evaluatedetail_top none'>
+            <view class='top_l'>
+                <image src="{{item.src}}"></image>
+                <text>{{item.name}}</text>
+            </view>
+            <view class='checkin_date'>{{checkin_date}}</view>
+        </view>
+        <view class='leave_message'> {{item.leave_message}}</view>
+        <view class='reply_p'>
+            <image class='reply' src='{{item.reply_src}}'></image>
+            <view class='reply_text'>{{item.reply}}</view>
+        </view>
+        
+    </view>
+</view>

@@ -1,0 +1,32 @@
+/* pages/integral/integrallist/integrallist.wxss */
+page{
+  background: #f7f7f7;
+}
+.int_list{
+  background: #fff;
+  height: 4; 
+}
+.int_li{
+  border-bottom: 1px solid #f7f7f7;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 32rpx;
+  color: #666;
+}
+.int_left{
+  line-height: 4;
+}
+.int_right{
+  float: right;
+  margin-top: 20rpx;
+  color: #ccc;
+}
+.int_right text{
+  text-align: right;
+  line-height: .5;
+  color: #f54d28;
+  width: 100%;
+  display:inline-block;
+
+
+}

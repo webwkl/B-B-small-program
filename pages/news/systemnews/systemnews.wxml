@@ -1,0 +1,10 @@
+<block wx:for="{{notice}}" wx:key="index">
+  <view class="time">{{item.time}}</view>
+  <view class='notice'>
+      <image class='person' src="{{item.person}}"></image>
+      <view class='news'>
+          <text class='tit'>系统通知</text>
+          <view class='massage'>{{item.massage}}</view>
+      </view>
+  </view>
+</block>

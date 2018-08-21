@@ -1,0 +1,17 @@
+<!--pages/system/system.wxml-->
+<view class='system_ul'>
+  <block wx:for="{{items}}" wx:key="index">
+   <view class='system_li'>
+    <text class='system_date'>
+    {{item.date}}
+    </text>
+    <view class='system_content'>
+     <image class='system_photo' src='{{item.src}}'></image>
+     <view class='system_msg'>
+     <text class='msg_title'>{{item.title}}</text>
+     <text class='msg'>{{item.msg}}</text>
+     </view>
+    </view>
+   </view>
+  </block>
+</view>

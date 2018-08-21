@@ -1,0 +1,41 @@
+/* pages/housingdetails/more/more.wxss */
+page{
+  background: #f7f7f7;
+}
+.page_con{
+  background: #fff;
+  margin-bottom: 20rpx;
+  
+}
+.page_con text{
+  font-size: 32rpx;
+  color: #666;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 90rpx;
+  height: 90rpx;
+}
+.page_con .page_img{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto; 
+}
+.page_con .page_img .img_con{
+  width: 25%;
+  height:148rpx;
+
+}
+.page_con .page_img .img_con image{
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: 0 auto
+}
+.page_con .page_img .img_con text{
+  font-size: 20rpx;
+  color: #666;
+  text-align: center;
+  line-height: 2.5;
+}

@@ -1,0 +1,15 @@
+<view class='news'>
+  <block wx:for="{{news}}" wx:key="index">
+    <navigator class='news_content' url="{{item.url}}">
+        <image class='person' src="{{item.person}}"></image>
+        <view class='right'>
+            <view class='right_top'>
+                <view class='text'>{{item.name}}<view class='spot' wx:if="{{item.show}}"></view></view>
+                
+                <view class='time'>刚刚</view>
+            </view>
+            <view class='massage'>{{item.massage}}</view>
+        </view>
+    </navigator>
+    </block>
+</view>

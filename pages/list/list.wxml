@@ -1,0 +1,48 @@
+<!--pages/my/list.wxml-->
+
+ <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待入住</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待评价
+     <view class='icon' wx:if='{{currentTab!=3}}'>2</view>
+    </view>
+    <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">已取消</view>
+  </view>
+  <view class='content_list'>
+  <block wx:for='{{items}}'>
+   <view class='list_li'>
+    <view class='li_top'>
+     <text class='list_l'>{{item.title}}</text>
+     <!-- //status 0 待付款  1待入住 2已入住 3已离店 4已取消 -->
+     <view class='list_btn' wx:if="{{item.status==0}}">待付款</view>
+     <view class='list_btn' wx:if="{{item.status==1}}">待入住</view>
+     <view class='list_btn' wx:if="{{item.status==2}}">待评价</view>
+     <view class='list_btn' wx:if="{{item.status==3}}" style='background-color:#999999'>已取消</view>
+    </view>
+    <view class='middle'>
+      <image class='m_image'>
+      </image>
+      <view class='m_left'>
+      <text class='text_t'>整套房子 | 1室1厅1卫 | 华章</text>
+      <text class='text_m'>{{item.date}}</text>
+      <text class='text_b'>总价:￥{{item.totalmoney}}</text>
+      </view>
+    </view>
+    <view style='display: flex;justify-content: space-between;'>
+         <view class='time' wx:if="{{item.status==0}}">
+          <text style='color: #f54d28;'>{{time}}</text>
+          <text>未支付，自动取消</text>
+         </view>
+         <view class='list_btns'>
+         <view class='list_button' wx:if="{{item.status==3 || item.status==0}}">删除订单</view>
+          <view class='list_button'wx:if="{{item.status==0}}">付款</view>
+          <view class='list_button'  wx:if="{{item.status==2}}">评价</view>
+          <view class='list_button' wx:if="{{item.status==2}}">查看评价</view>
+          <view class='list_button'  wx:if="{{item.status==1 || item.status==2}}">查看订单</view>
+          
+         </view>
+    </view>
+   </view>
+   </block>
+  </view>

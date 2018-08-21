@@ -1,0 +1,16 @@
+<!--pages/integral/integral.wxml-->
+<view class='integral'>
+  <view class='number'>
+    <view class='number_num'>{{number}}</view>
+    <text>我的积分</text>
+  </view>
+  <view class='money'>
+    <text>可抵现金</text><text class='money_num'>￥{{money}}</text>
+  </view>
+  <view class='money'>
+    <text>积分明细</text><image src='{{url}}'></image>
+  </view>
+  <view class='problem'>
+    <text>什么是积分？\n积分是青城用户在是预定、评价、参与活动等，青城平台给予的奖励。预定房源时可以用积分抵扣现金，100积分可抵扣1元现金。每个订单最多可使用10,000积分。</text>
+  </view>
+</view>

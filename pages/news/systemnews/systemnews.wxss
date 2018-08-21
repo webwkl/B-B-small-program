@@ -1,0 +1,35 @@
+page{
+  padding: 30rpx;
+  background: #f7f7f7;
+}
+.time{
+    font-size: 22rpx;
+    color: #666;
+    text-align: center;
+    line-height: 44rpx;
+}
+.notice{
+  display: flex;
+}
+.notice .person{
+  width: 84rpx;
+	height: 84rpx;
+  background: #eee;
+  border-radius: 50%;
+  margin-right: 25rpx;
+}
+.notice .news{
+  width: 530rpx;
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 4rpx;
+}
+.notice .news .tit{
+  font-size: 28rpx;
+  color: #666;
+  line-height: 56rpx;
+}
+.notice .news .massage{
+  font-size: 28rpx;
+  color: #999;
+}

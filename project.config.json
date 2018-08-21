@@ -1,0 +1,108 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.0",
+	"appid": "wx7f9e03557563cb12",
+	"projectname": "%E9%9D%92%E5%9C%88%E4%BC%81%E4%B8%9A12",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": " integral",
+					"pathName": "pages/integral/integral",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "个人资料",
+					"pathName": "pages/personallook/personallook",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "积分明细",
+					"pathName": "pages/integral/integrallist/integrallist",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "房源详情",
+					"pathName": "pages/housingdetails/housingdetails",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "筛选",
+					"pathName": "pages/filter/filter",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "订单",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "订单详情",
+					"pathName": "pages/listdetail/listdetail",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "日期",
+					"pathName": "pages/calendar/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "news",
+					"pathName": "pages/news/news",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "添加入住人",
+					"pathName": "pages/addoccupant/addoccupant",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "更多",
+					"pathName": "pages/housingdetails/more/more"
+				}
+			]
+		}
+	}
+}

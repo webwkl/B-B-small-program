@@ -1,0 +1,27 @@
+<!--pages/evaluatedetail/evaluatedetail.wxml-->
+<view class='evaluatedetail'>
+ <view class='evaluatedetail_top'>
+    <view class='top_l'>
+     <image src="{{item.src}}"></image>
+     <text>{{item.name}}</text>
+    </view>
+    <view class='evaluate_r'>
+          <image wx:for="{{fen}}" wx:key="index" src="/resource/images/landlord/small_start.png" class='start'></image>
+          <image class='start' src="/resource/images/landlord/s_ban.png" wx:if="{{ban}}" ></image>
+          <image wx:for="{{hui}}" wx:key="index" src="/resource/images/landlord/start_cc.png" class='start'></image>
+          <image class='start bj' src="/resource/images/landlord/bj_fen.png" ></image>
+          <text class='fen'>{{item.fen}}</text>
+      </view>
+ </view>
+ <view class='evaluatedetail_content'>
+   <text class='evaluatedetail_title'>{{item.title}}</text>
+  <view class='images'>
+  <block wx:for="{{item.images}}" wx:key="index">
+   <image src="{{item.src}}"></image>
+  </block>
+   </view>
+  <text class="evaluatedetail_bottom">
+  {{item.date}}
+   </text>
+ </view>
+</view>

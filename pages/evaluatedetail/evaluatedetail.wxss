@@ -1,0 +1,100 @@
+/* pages/evaluatedetail/evaluatedetail.wxss */
+page{
+  background: #f7f7f7;
+}
+.evaluatedetail{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  height: auto;
+  background: #fff;
+}
+.evaluatedetail_top{
+  height: 112rpx;
+  width: 690rpx;
+  margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center
+}
+.evaluate_r{
+  height: 25rpx;
+  width: 219rpx;
+  display: flex;
+  align-items: center
+}
+.evaluate_r .start{
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+  position: relative;
+}
+.evaluate_r .bj{
+  margin-right: 0;
+  width:66rpx;
+  margin-left:22rpx;
+}
+.evaluate_r .fen{
+  position: absolute;
+  height: 25rpx;
+	font-family: MicrosoftYaHei;
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 25rpx;
+  right:40rpx;
+}
+.evaluate_l{
+  font-family: MicrosoftYaHei;
+	font-size: 24rpx;
+	line-height: 24rpx;
+	color: #f54d28;
+}
+.top_l{
+  display: flex;
+ align-items: center
+ }
+.top_l image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.top_l text{
+  font-family: MicrosoftYaHei;
+	font-size: 24rpx;
+	color: #999999;
+}
+.evaluatedetail_content{
+  width: 628rpx;
+  margin-left: 67rpx;
+  border-top: 1rpx solid #eee;
+  padding-top: 22rpx;
+}
+.evaluatedetail_title{
+  display: inline-block;
+  width: 100%;
+  font-family: MicrosoftYaHei;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 46rpx;
+	color: #666666;
+  margin-bottom: 20rpx;
+}
+.images{
+  display: flex;
+  justify-content: space-around
+}
+.images image{
+  width: 200rpx;
+  height: 125rpx;
+}
+.evaluatedetail_bottom{
+  display: inline-block;
+  width: 100%;
+  font-family: MicrosoftYaHei;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #999999;
+  text-align: right;
+  margin-bottom: 10rpx;
+}

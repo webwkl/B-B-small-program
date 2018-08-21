@@ -1,0 +1,49 @@
+/* pages/addoccupantdetail/addoccupantdetail.wxss */
+page{
+  background: #f7f7f7;
+}
+.addoccupantdetail{
+  width: 100%;
+  padding: 0 30rpx;
+  height: auto;
+  background: #fff;
+  margin-bottom: 75rpx;
+}
+.addoccupantdetail_li{
+  width: 690rpx;
+  height: 124rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.addoccupantdetail_li text{
+ font-family: MicrosoftYaHei;
+  font-size:28rpx;
+  color: #666666
+}
+.addoccupantdetail_li .addoccupantdetail_text1{
+  font-family: MicrosoftYaHei;
+  font-size:28rpx;
+  color: #999;
+  text-align: right
+}
+.addoccupantdetail_text1 .down{
+  width:25rpx;
+  height: 25rpx;
+  display: inline-block;
+}
+.addoccupant_btn{
+  width: 690rpx;
+  margin: 0 auto;
+  height: 90rpx;
+	background-color: #f54d28;
+	border-radius: 4rpx;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+  font-family: MicrosoftYaHei;
+	font-size: 32rpx;
+}

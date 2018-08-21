@@ -1,0 +1,368 @@
+/* pages/housingdetails/housingdetails.wxss */
+page{
+  background: #f7f7f7;
+  font-family: Microsoft YaHei
+}
+swiper{
+  width: 100%;
+  height: 340rpx;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+.info_con{
+  width: 90%;
+  height: 240rpx;
+  position: relative;
+  top:-50rpx;
+  z-index: 10;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.info_top{
+  width: 95%;
+  margin: 0 auto;
+  height: 140rpx;
+  border-bottom: 1px solid #f7f7f7;
+  display: flex;
+  padding-top:10rpx;
+}
+.info_top text{
+  font-size: 22rpx;
+  color: #999;
+}
+.info_top text text{
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.8
+}
+.info_top view image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: 30rpx;
+}
+.info_top .info_jian image{
+  width: 20rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+  margin-top:30rpx;
+}
+.info_botm{
+  display: flex;
+  width: 100%;
+  margin: 15rpx auto;
+}
+
+.info_li{
+  width: 20%;
+  
+}
+.info_li image{
+  width:40rpx; 
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.info_botm2 .info_li image{
+  width:44rpx; 
+  height: 44rpx;
+}
+
+.info_li text{
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 22rpx;
+  color: #999;
+}
+.info_botm2 .info_li text{
+  font-size: 24rpx;
+}
+.info_con2{
+  background: #fff;
+  padding-bottom: 30rpx;
+  position: relative;
+  top:-20rpx;
+}
+.info_h2{
+  font-size: 32rpx;
+  color: #666;
+  padding-left: 30rpx;
+  font-weight: 600;
+  line-height: 2;
+  display: block;
+  padding-top: 40rpx
+}
+.info_p{
+  font-size: 28rpx;
+  color: #999;
+  display: block;
+  width: 93%;
+  margin: 0 auto;
+  line-height: 1.5;
+  height: 120rpx;
+  overflow: hidden;
+  
+}
+.info_p2{
+  font-size: 28rpx;
+  color: #999;
+  display: block;
+  width: 93%;
+  margin: 0 auto;
+  line-height: 1.5;
+  height: auto;
+  overflow: hidden;
+  
+}
+.info_con2 view button{
+  width: 100%;
+  height: 90rpx;
+  line-height: 120rpx;
+  font-size:28rpx;
+  color: #f54d28;
+  background: -webkit-linear-gradient(to bottom,rgba(255,255, 255, 0.3) 0%, rgba(255,255, 255, 1) 50%, rgba(255,255, 255, 1) 100%);
+  background: -moz-linear-gradient(to bottom,rgba(255,255, 255,0.3) 0%, rgba(255,255, 255, 1) 50%, rgba(255,255, 255, 1) 100%);
+  background: -o-linear-gradient(to bottom,rgba(255,255, 255, 0.3) 0%, rgba(255,255, 255, 1) 50%, rgba(255,255, 255, 1) 100%);
+  background: linear-gradient(to bottom,rgba(255,255, 255, 0.3) 0%, rgba(255,255, 255, 1) 50%, rgba(255,255, 255, 1) 100%);
+  position: relative;
+  top: -30rpx;
+  
+}
+.info_con2 view button::after{
+  border: none;
+}
+
+.info_con3{
+  background: #fff;
+  padding-bottom: 30rpx;
+  position: relative;
+ 
+}
+.info_top3{
+  width: 90%;
+  height: 110rpx;
+  margin: 0 auto;
+  border-bottom: 1px solid #f7f7f7;
+  display: flex;
+  padding-top:10rpx; 
+}
+.info_top3 view{
+  display: flex;
+}
+.info_top3 view image{
+  display: block;
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+  margin-top:50rpx;
+}
+.fennum{
+  width: 66rpx;
+  height: 25rpx;
+  background:#f00; 
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 25rpx;
+  margin-top: 26px;
+  text-align: center;
+  padding-left: 10rpx;
+  margin-left: 10rpx;
+}
+.evaluate{
+  width: 380rpx;
+  font-size: 24rpx;
+  color: #f54d28;
+  text-align: right;
+  margin-top: 45rpx;
+}
+.userid{
+  display: flex;
+}
+.userid text{
+  display: block;
+  width: 635rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 20rpx;
+}
+.userid image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 10rpx;
+}
+.info_con4{
+  background: #fff;
+  padding-bottom: 30rpx;
+  position: relative;
+  top:20rpx;
+}
+.info_con5{
+  background: #fff;
+  padding-bottom: 30rpx;
+  position: relative;
+  top:40rpx;
+}
+.info_tit{
+  display: flex;
+}
+.info_tit text{
+  width: 50%;
+}
+.info_tit text:nth-child(2){
+  text-align: right;
+  color: #f54d28;
+  font-size: 28rpx;
+  margin-top: 55rpx;
+  margin-right: 20rpx;
+}
+.notice{
+
+}
+.notice view{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+.notice view text{
+  display: inline-block;
+  width: 40%;
+  height: 100rpx;
+  font-size: 28rpx;
+  color: #999;
+  line-height: 100rpx;
+  border-bottom: 1px solid #f9f9f9;
+}
+.notice view text:nth-child(2){
+  text-align: right;
+  width: 60%;
+}
+.info_con6{
+  background: #fff;
+  padding-bottom: 30rpx;
+  position: relative;
+  top:60rpx;
+}
+
+.info_con7{
+  background: #fff;
+  padding-bottom: 30rpx;
+  position: relative;
+  top:80rpx;
+}
+
+.land{
+  display: flex;
+  width: 90%;
+  margin: 30rpx auto;
+  margin-bottom: 200rpx;
+}
+.land view{
+
+} 
+.land view:nth-child(1){
+  width:125rpx; 
+}
+.land view:nth-child(1) image{
+  width:125rpx; 
+  height: 125rpx; 
+}
+.land view:nth-child(1) text{
+  width: 125rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+}
+.land view:nth-child(2) text{
+  width: 540rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 20rpx;
+  line-height: 1.7;
+  text-align: left;
+}
+
+ .detail_all{
+   width:100%;
+   padding: 0 30rpx;
+   background-color: #fff;
+   height: 120rpx;
+   display: flex;
+   justify-content: space-between;
+   padding-top: 15rpx;
+   margin-top: -15rpx;
+   z-index: 100;
+   position: fixed;
+   bottom: 0;
+   
+ }
+ .all_l text{
+   font-size: 22rpx;
+   line-height: 34rpx;
+ }
+ .all_l view image{
+   width: 25rpx;
+   height: 25rpx;
+ }  
+ .detail_btns{
+  display: flex;
+  justify-content: flex-end;
+ }
+ .detail_btns view{
+   width: 195rpx;
+   height: 60rpx;
+  font-family: MicrosoftYaHei;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+  line-height: 60rpx;
+  background-color: #f54d28 ;
+  color: #fff;
+	border-radius: 4px;
+	border: solid 1px #f54d28;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  text-align: center
+ }
+ .line{
+   width: 40rpx;
+   height: 40rpx;
+   margin-top:30rpx;
+ }
+ .line image{
+   width: 40rpx;
+   height: 40rpx;
+ }
+  .line button{
+   width: 40rpx;
+   height: 40rpx;
+   background: #fff;
+   padding: 0;
+   line-height: 1;
+   border: 0;
+ }
+ button::after{ 
+   border: none
+ }
+ .line button image{
+   width: 100%;
+   height: 100%;
+ }
+ .img_box{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.img_box image{
+  width: 100%;
+  height: 100%;
+}

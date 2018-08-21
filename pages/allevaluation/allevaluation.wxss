@@ -1,0 +1,105 @@
+/* pages/evaluatedetail/evaluatedetail.wxss */
+page{
+  background: #f7f7f7;
+}
+.evaluatedetail{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  height: auto;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.evaluatedetail_top{
+  height: 112rpx;
+  width: 690rpx;
+  margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom:1rpx solid #eee;
+}
+.evaluate_r{
+  height: 25rpx;
+  width: 219rpx;
+  display: flex;
+  align-items: center
+}
+.evaluate_r .start{
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+  position: relative;
+}
+.evaluate_r .bj{
+  margin-right: 0;
+  width:66rpx;
+  margin-left:22rpx;
+}
+.evaluate_r .fen{
+  position: absolute;
+  height: 25rpx;
+	font-family: MicrosoftYaHei;
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 25rpx;
+  right:40rpx;
+}
+.top_l text{
+  font-size: 32rpx;
+  color: #666;
+}
+.list{
+  padding: 30rpx 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.list .score{
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  line-height: 44rpx;
+}
+.top_l image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.checkin_date{
+  font-size: 24rpx;
+  color: #999;
+}
+.leave_message{
+  font-size: 32rpx;
+  color: #666;
+  text-indent: 56rpx;
+  line-height: 56rpx;
+  padding:30rpx 0; 
+}
+.none{
+  border:none;
+}
+.border_b{
+  border-bottom: 1px solid #eee;
+}
+.reply_p{
+  position: relative;
+  padding-top: 11rpx;
+  margin-left: 50rpx;
+  margin-bottom: 20rpx;
+}
+.reply{
+  width: 15rpx;
+  height: 11rpx;
+  position: absolute;
+  left: 100rpx;
+  top: 0;
+  z-index: 11;
+}
+.reply_text{
+  width: 629rpx;
+  padding: 30rpx;
+  font-size: 24rpx;
+  color: #999;
+  background: #eee;
+  border-radius: 6rpx;
+}

@@ -1,0 +1,10 @@
+<!--pages/integral/integrallist/integrallist.wxml-->
+<view class='int_list'>
+  <view class='int_li' wx:for='{{porList}}' wx:key='item'>
+    <text class='int_left'>{{item.portit}}</text>
+    <text class='int_right'>
+      <text>+{{item.pornum}}</text>\n{{item.portime}}
+    </text>
+  </view>
+  
+</view>

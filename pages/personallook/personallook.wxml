@@ -1,0 +1,35 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class='look_top'>
+  <image class='photo' src="{{url}}">
+  </image>
+  <image class='camera' src="/resource/images/mine/camera.png"  bindtap="chooseimg">
+  </image>
+</view>
+<view class='look_li'>
+<text class='text_l'>姓名</text>
+<input name="name" class='text_r' placeholder="请输入姓名" value="{{form.name}}" />
+<!-- <text class='text_r'>陈云</text> -->
+</view>
+<view class='look_li'>
+<text class='text_l'>性别</text>
+<input name="sex" class='text_r' placeholder="请输入性别" value="{{form.sex}}" />
+</view>
+<view class='look_li'>
+<text class='text_l'>出生日期</text>
+<!-- <input name="input" class='text_r' placeholder="请输入出生日期" value="" /> -->
+<picker mode="date" placeholder="请输入出生日期" value="{{date}}"   bindchange="bindDateChange">
+    <view class="picker">
+       {{date}}
+    </view>
+  </picker>
+</view>
+<view class='look_li'>
+<text class='text_l'>电子邮件</text>
+<input name="email" class='text_r' placeholder="请输入电子邮件" value="{{form.email}}" />
+</view>
+<view class='look_li last_li'>
+<text class='text_l'>身份证号</text>
+<input name="card" class='text_r' placeholder="请输入身份证号" value="{{form.idcard}}" />
+</view>
+<button class='look_btn' formType="submit">保存</button>
+</form>

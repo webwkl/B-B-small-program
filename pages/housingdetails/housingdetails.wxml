@@ -1,0 +1,235 @@
+<!--pages/housingdetails/housingdetails.wxml-->
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key='item'>
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='info_con'>
+  <view class='info_top'>
+    <text class='info_word'>{{user_introduce}}</text>
+    <view><image src='{{user_img}}'></image></view>
+    <view class='info_jian' bindtap='usterdetail'><image src='/resource/images/mine/jian.png'></image></view>
+  </view>
+  <view class='info_botm'>
+    <view class='info_li'>
+      <image src='/resource/images/housing/ren.png'></image>
+      <text>{{resident_number}}人</text>
+    </view>
+    <view class='info_li'>
+      <image src='/resource/images/housing/mi.png'></image>
+      <text>{{area}}㎡</text>
+    </view>
+    <view class='info_li'>
+      <image src='/resource/images/housing/fang.png'></image>
+      <text>{{room}}室</text>
+    </view>
+    <view class='info_li'>
+      <image src='/resource/images/housing/chuang.png'></image>
+      <text>{{bed_count}}床</text>
+    </view>
+    <view class='info_li'>
+      <image src='/resource/images/housing/wc.png'></image>
+      <text>{{toilet}}卫</text>
+    </view>
+  </view>  
+</view>
+
+<view class='info_con2'>
+  <view>
+    <text class='info_h2'>房屋详情</text>
+    <text wx:if="{{isFold}}"  class='info_p2'>{{detail}}</text>
+    <text wx:else  class='info_p'>{{detail}}</text>
+    <button wx:if="{{isFold}}" bindtap="flodFn2">收起</button>
+    <button wx:else bindtap="flodFn">查看全部</button>
+  
+  </view>
+  <view>
+    <text class='info_h2'>房屋设施</text>
+    <view class='info_botm info_botm2'>
+    <block wx:for="{{sheshi}}" wx:key="item" wx:for-index='idx'>
+        <block wx:if="{{idx<5}}">   
+          <view class='info_li'>
+            <image src='{{imgurl}}/Public/images/icon/{{item.image}}.png'></image>
+            <text>电梯</text>
+          </view>
+        </block>
+     </block>
+    <view class='info_li' bindtap='gengduo'>
+      <text style='line-height: 1.9;color:#f54d28'>{{sheshu}}+</text>
+      <text style='color:#f54d28'>更多设施</text>
+    </view>
+  </view> 
+  </view>
+</view>
+
+<view class='info_con3'>
+  <view class='info_top3'>
+    <view><image src='/resource/images/housing/xingc.png'></image><image src='/resource/images/housing/xingc.png'></image><image src='/resource/images/housing/xingc.png'></image><image src='/resource/images/housing/xingb.png'></image><image src='/resource/images/housing/xingh.png'></image></view>
+    <view class='fennum'>4.0</view>
+    <text class='evaluate' bindtap='pinglun'>阅读全部{{comment_shu}}条评价</text>
+    <view><image style='width:15rpx;height:23rpcx;padding-left:30rpx;' src='/resource/images/housing/jianh.png'></image></view>
+  </view>
+  <text class='info_p' style='margin-top:30rpx'>{{comment}}</text>
+  <view class='userid'>
+    <text>{{nick_name}}\n{{add_time}}</text>
+    <image src="{{avatar_url}}"></image>
+  </view>
+</view>
+
+<view class='info_con4'>
+  <view>
+    <text class='info_h2'>位置</text>
+    <text class='info_p' style='margin-top:30rpx;margin-bottom:10rpx;'>交通情况</text>
+    <text class='info_p'>{{traffic_position}}</text>
+
+    <text class='info_p' style='margin-top:30rpx;margin-bottom:10rpx;'>周边情况</text>
+    <view class="img_box">
+      <image src='{{src}}'></image>
+    </view>
+    <text class='info_p'>{{zhou_bian}}</text>
+  
+  </view>
+</view>
+
+<view class='info_con5'>
+  <view class='info_tit'>
+    <text class='info_h2'>入住须知</text>
+    <text>房屋守则</text>
+  </view>
+  <view class='notice'>
+    <view>
+      <text>入住时间</text>
+      <text>{{live_time}}</text>
+    </view>
+    <view>
+      <text>退房时间</text>
+      <text>{{leave_time}}</text>
+    </view>
+    <view>
+      <text>可住天数</text>
+      <text>{{short_rent}}-{{long_rent}}天</text>
+    </view>
+    <view>
+      <text>押金</text>
+      <text wx:if="{{deposit == 1}}">免押金</text>
+      <text wx:else>收取一天押金</text>
+    </view>
+    <view>
+      <text>基本要求</text>
+      <text>{{rules}}</text>
+    </view>
+  </view>
+</view>
+
+<view class='info_con6'>
+  <view>
+    <text class='info_h2'>退订政策</text>
+  </view>
+</view>
+
+<view class='info_con7'>
+  <view class='info_tit' style='border-bottom: 1px solid #f9f9f9;'>
+    <text class='info_h2'>房东介绍</text>
+    <text bindtap='usterdetail'>查看房东主页及评价</text>
+  </view>
+
+  <view class='land'>
+    <view>
+      <image src='{{user_img}}'></image>
+      <text>{{lanlord_name}}</text>
+    </view>
+    <view>
+      <text>{{user_introduce}}</text>
+    </view>
+  </view>
+
+</view>
+
+<view class='detail_all'>
+      <view class='all_l'>
+        <text><text style='color:#f54d28'>¥ {{money}}/晚</text></text>
+        <view style='display:block' wx:if="{{score==1}}">
+            <image src='/resource/images/housing/xingb.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+        </view>
+        <view style='display:block' wx:if="{{score==2}}">
+             <image src='/resource/images/housing/xingc.png'></image>
+             <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+        </view>
+        <view style='display:block' wx:if="{{score==3}}">
+             <image src='/resource/images/housing/xingc.png'></image>
+             <image src='/resource/images/housing/xingb.png'></image>
+             <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+        </view>
+        <view style='display:block' wx:if="{{score==4}}">
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+        </view>
+        <view style='display:block' wx:if="{{score==5}}">
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+             <image src='/resource/images/housing/xingb.png'></image>
+             <image src='/resource/images/housing/xingh.png'></image>
+             <image src='/resource/images/housing/xingh.png'></image>
+        </view>
+        <view style='display:block' wx:if="{{score==6}}">
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+        </view>
+        <view style='display:block' wx:if="{{score==7}}">
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+             <image src='/resource/images/housing/xingb.png'></image>
+             <image src='/resource/images/housing/xingh.png'></image>
+        </view>
+        <view style='display:block' wx:if="{{score==8}}">
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingh.png'></image>
+        </view>
+        <view style='display:block' wx:if="{{score==9}}">
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+             <image src='/resource/images/housing/xingb.png'></image>
+        </view>
+        <view
+         style='display:block' wx:if="{{score==10}}">
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+            <image src='/resource/images/housing/xingc.png'></image>
+        </view>
+        <view class='fennum'>{{filters.toFix(score/2*1)}}</view>
+        
+      </view>
+      <view class='line'><button bindtap='tall' ><image src='/resource/images/housing/phone.png'></image></button></view>
+      <view class='line'><image src='/resource/images/housing/messge.png'></image></view>
+      <view class='detail_btns'>
+       <view class='button1' bindtap='ljyd'>立即预定</view>
+      </view>
+</view>

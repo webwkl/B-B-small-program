@@ -1,0 +1,28 @@
+<!--pages/my/my.wxml-->
+<view class='my_top'>
+  <image class='photo' src="/resource/images/mine/phone.png"></image>
+  <text class='name_text'>陈云</text>
+  <view class="a_view">
+   <navigator class='a_look' url="/pages/personallook/personallook" >查看/编辑个人资料</navigator> 
+  </view>
+</view>
+
+  <view class='ul_view'>
+   <navigator class='li_a'  url="/pages/list/list" >
+   <image class='lia_icon' src="/resource/images/mine/dingdan.png"></image>
+   <text>我的订单</text>
+   <image class='jiantou' src="/resource/images/mine/jiantou.png"></image>
+  </navigator>
+  </view>
+  <view class='ul_view'>
+   <navigator class='li_a'>
+   <image class='lia_icon' src="/resource/images/mine/jifen.png"></image>
+   <text>我的积分</text>
+   <image class='jiantou' src="/resource/images/mine/jiantou.png"></image>
+  </navigator>
+  </view>
+  <button class='btn' open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">点击授权</button>
+  <!-- <view class='btn'>退出登录</view> -->
+  
+
+  

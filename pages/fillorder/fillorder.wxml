@@ -1,0 +1,125 @@
+<view class='all_title'>入住详情</view>
+<view class='h4_title'><text>{{h4_title}}</text></view>
+<view class="top">
+    <image src='{{img}}' class='house'></image>
+    
+    <view class='news'>
+        <text class='text'>{{text}}</text>
+        <text class='text'>时间：{{time}}</text>
+        <text class='text'>{{endtime}}</text>
+    </view>
+</view>
+<!-- <view class='tops'>
+    <text class='tit'>入住日期</text>
+    <navigator class='choose' url='/pages/calendar/index'>
+        <input class='first' value='{{checkInDate}}'></input>
+        <view class="time">
+            <view class='line'></view>
+            <view class='days'>2晚</view>
+        </view>
+        <input class='first' value='{{checkOutDate}}'></input>
+    </navigator>
+</view> -->
+<!-- <view class='tip'>备注：最早入住时间14:00，最晚退房时间12：00</view> -->
+<view class='news_num'>
+    <view class='time'>
+        <input placeholder='预计到家时间（便于房东提前准备）' class='date'></input>
+        <image class='right' src="{{right}}"></image>
+    </view>
+    <view class='person'>
+        <text class='tit'>入住人数</text>
+        <view class='count'>
+            <view class='flex'>
+                <text>成人</text>
+                <text class='less' bindtap='dndn'>-</text>
+                <text>{{nums}}</text>
+                <text class='plus' bindtap='upup'>+</text>
+            </view>
+        </view>
+      </view>
+</view>
+<view class='add' bindtap='showModal' >+添加入住人</view>
+<view class='addoccupantdetail' wx:if="{{showModal}}">
+  <view class='addoccupantdetail_li'>
+  <text>姓名</text>
+  <input name="input" class='addoccupantdetail_text1' placeholder="必填" value="{{form.name}}" />
+  </view>
+  <view class='addoccupantdetail_li'>
+  <picker bindchange="bindPickerChange" class='addoccupantdetail_text1' style='color:#666' value="{{index}}" range="{{array}}" >
+          <view class="picker">
+            {{array[index]}}
+            <image class='down' src="/resource/images/down.png"></image>
+          </view>
+        </picker>
+  <input name="input" class='addoccupantdetail_text1' placeholder="必填" value="{{form.idcard}}" />
+  </view>
+  <view class='addoccupantdetail_li'>
+  <text>手机号</text>
+  <input name="input" class='addoccupantdetail_text1' placeholder="必填" value="{{form.phone}}" />
+  </view>
+</view>
+<view class='insurance'>
+  <text class='text'>住宿意外险</text>
+  <view class='go_add'>
+    <text>添加</text>
+    <image class='right_red' src="{{right_red}}"></image>
+  </view>
+</view>
+<view class='use'>
+    <text class='text'>是否使用积分</text>
+    <switch checked="{{switch2Checked}}" bindchange="switch2Change"/>
+</view>
+<view class='mine_integral' wx:if='{{switch2Checked}}'>
+    <view class='text'>积分抵扣：<text class="integral">{{integral}}</text>积分抵扣<text class="integral">{{money}}元</text></view>
+    <view class='text'>我的积分：<text class="integral">{{integral}}</text></view>
+</view>
+<view class='protocol'>
+    <!-- <icon class='check' type='success_no_circle' size='10' color='#fff'></icon> -->
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" >
+        <checkbox value='{{yes}}' checked="{{yes}}"/>
+      </label>
+    </checkbox-group>
+    <view class='IDo'>我已阅读并同意<navigator src="">《青城服务协议》</navigator></view>  
+</view>
+<view class='bottom'>
+  <text class='text'>订单总额： ￥{{all_money}}</text>
+  <image src="{{bottom_red}}" class='bottom_red' bindtap='go_count'></image>
+  <button class='sub'>提交订单</button>
+</view>
+<view class='bottom_top' wx:if="{{go_count}}">
+  <view class='title'>明细</view>
+  <view class='marginb'>
+      <view class='money_detail'>
+          <text>住宿费</text>
+          <text>¥{{home_free}}</text>
+      </view>
+      <view class='money_detail color999' >
+          <text>{{datestart}}-{{dateend}}</text>
+          <text>{{days}}晚</text>
+      </view>
+  </view>
+  <view class='marginb'>
+      <view class='money_detail'>
+          <text>清洁费</text>
+          <text>¥{{clean_free}}</text>
+      </view>
+      <view class='money_detail color999'>
+          <text>{{clean_ci}}次</text>
+          <text>{{clean_ci}}*¥{{oddclean}}</text>
+      </view>
+  </view>
+  <view class='marginb'>
+      <view class='money_detail'>
+          <text>积分抵扣</text>
+          <text class='color_red'>-¥{{deduction}}</text>
+      </view>
+  </view>
+  <view class='marginb'>
+      <view class='money_detail'>
+          <text>房费优惠</text>
+          <text class='color_red'>-¥{{offer}}</text>
+      </view>
+  </view>
+</view>
+<view class='opacity' wx:if="{{go_count}}"></view>

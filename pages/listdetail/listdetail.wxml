@@ -1,0 +1,105 @@
+<!--pages/listdetail.wxml-->
+<view class='detail_top'>
+<text class='datail_tl'>订单状态</text>
+<text class='datail_tr'>待付款</text>
+</view>
+<view class='content_list'>
+   <view class='list_li'>
+    <view class='li_top'>
+     <text class='list_l'>{{items.title}}</text>
+    </view>
+    <view class='middle'>
+      <image class='m_image'>
+      </image>
+      <view class='m_left'>
+      <text class='text_t'>整套房子 | 1室1厅1卫 | 华章</text>
+      <text class='text_m'>时间：6月26日-7月1日  共2晚</text>
+      <text class='text_b'>最早入住时间14:00，最晚退房12:00</text>
+      </view>
+    </view>
+   </view>
+   <view class='detail_form'>
+      <view class='detail_li'>
+      <text class='form_l'>姓名</text>
+      <text class='form_r'>{{form.name}}</text>
+      </view>
+      <view class='detail_li'>
+      <text class='form_l'>身份证号</text>
+      <text class='form_r'>{{form.idcard}}</text>
+      </view>
+      <view class='detail_li'>
+      <text class='form_l'>手机号</text>
+      <text class='form_r'>{{form.phone}}</text>
+      </view>
+      <view class='detail_li'>
+      <text class='form_l'>订单编号</text>
+      <text class='form_r'>{{form.num}}</text>
+      </view>
+      <view class='detail_li'>
+      <text class='form_l'>创建时间</text>
+      <text class='form_r'>{{form.starttime}}</text>
+      </view>
+      <view class='detail_li' style='border:none'>
+      <text class='form_l'>保险</text>
+      <text class='form_r'>{{form.insurance}}</text>
+      </view>
+   </view>
+    <view class='detail_b' >
+        <view class='detail_li' >
+          <text class='form_l'>合计</text>
+          <text class='form_r' style='color:#f54d28'>{{form.money}}</text>
+        </view>
+        <view class='order'>
+        <view class='order_li'>
+          <view class=' order_text orderli_l'>
+          <text class='text1'>住宿费</text>
+          <text class='text2'>{{items.date}}</text>
+          </view>
+          <view class='order_text orderli_r'>
+          <text class='text1'>￥{{items.totalmoney}}</text>
+          <text class='text2'>{{items.nights}}晚</text>
+          </view>
+        </view>
+        </view>
+        <view class='order'>
+        <view class='order_li'>
+          <view class=' order_text orderli_l'>
+          <text class='text1'>清洁费</text>
+          <text class='text2'>{{items.nights}}次</text>
+          </view>
+          <view class='order_text orderli_r'>
+          <text class='text1'>￥{{items.cleansmouney}}</text>
+          <text class='text2'>{{items.cleaning}}*￥{{items.cleanmouney}}</text>
+          </view>
+        </view>
+        </view>
+        <view class='order'>
+        <view class='order_li order_felx'>
+          <text>积分抵扣</text>
+          <text class='text_red'>-¥{{items.jifen}}</text>
+        </view>
+        </view>
+        <view class='order'>
+        <view class='order_li order_felx'>
+          <text>房费优惠</text>
+          <text class='text_red'>-¥{{items.discount}}</text>
+        </view>
+        </view>
+    </view>
+    <!-- <image class='bj' url="/resource/bj.png"></image> -->
+    <view class='detail_all' wx:if="{{items.status==0 ||items.status==1}}">
+      <view class='all_l' wx:if="{{items.status==0}}">
+        <text>请在<text style='color:#f54d28'>14分20秒</text>内完成支付</text>
+       <text style='display:block'>否则将自动取消订单</text>
+      </view>
+      <view class='all_l' wx:elif="{{items.status==1}}">
+        <text>您的入住体验怎么样？</text>
+       <text style='display:block'>快去评价吧</text>
+      </view>
+      <view class='detail_btns'>
+       <view class='button1' wx:if="{{items.status==0}}">取消订单</view>
+       <view class='button2'wx:if="{{items.status==0}}">付款</view>
+       <view class='button2'wx:if="{{items.status==1}}">去评价</view>
+      </view>
+    </view>
+  </view>

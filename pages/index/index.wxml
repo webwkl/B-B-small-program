@@ -1,0 +1,65 @@
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+<view class="section">
+    <icon type="search" size="15" color="red" class='icon'/>
+    <input placeholder="地点/商圈/房源标题" auto-focus   bindconfirm="search" />
+</view>
+<view class='sure'>
+    <view class='news'>
+        <!-- <text> -->
+            <navigator url='/pages/switchcity/switchcity'>{{shoucity}}</navigator>
+        <!-- </text> -->
+        <image src="{{src}}" class='ding'></image>
+    </view>
+    <view class='news'>
+        <navigator url='/pages/calendar/index' class='time'>{{checkInDate}}-{{checkOutDate}}
+          <!-- <button>时间选择</button> -->
+        </navigator>
+        <!-- <text class='time'>6.27-6.29</text> -->
+    </view>
+    <view class='news'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" >
+          <view class="picker">
+            人数:{{array[index]}}人
+          </view>
+        </picker>
+        <!-- <text>人数</text> -->
+        <image class="down" src="{{src1}}">{{shoucity}}</image>
+    </view>
+    <view class='news none'>
+        <!-- <text> -->
+          <navigator url="/pages/filter/filter">筛选</navigator>
+        <!-- </text> -->
+    </view>
+</view>
+
+<block wx:for="{{list}}" wx:key="item">
+      <view class='swiper' bindtap='detaillianjie' data-textId="{{item.id}}">
+          <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <view wx:for="{{item.image}}" wx:key="item">
+              <swiper-item>
+                <image src="{{item}}" class="slide-image" />
+              </swiper-item>
+            </view>
+          </swiper>
+          <view class='explanation'>
+            <text class="money">￥{{item.money}}</text>
+            <text class='address'>{{item.trading_area}}</text>
+            <text class='score'>{{filters.toFix(item.score/2*1)}}</text>
+          </view>
+          <view class='explanation'>
+            <text class="legend">{{item.bright_spot}}</text>
+          </view>
+          <view class='claim'>{{item.houst_type}}·可住{{item.resident_number}}人</view>
+      </view>
+</block>
+
+<view class='fixed' wx:if="{{showModal}}">
+  <image src="{{src2}}" class='fixed_img'></image>
+  <icon type="cancel" color='white' size="40" class='fixed_icon' bindtap="hideModal"></icon>
+</view>
+<view class='fixed_bottom' bindtap="showModal">
+    <text class='active'>精彩</text>
+    <text class='active1'>活动</text>
+    <image src="{{src3}}" class='bottom_img'></image>
+</view>

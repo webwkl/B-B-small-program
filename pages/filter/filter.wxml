@@ -1,0 +1,83 @@
+<view class='container'>
+    <view class='top'>
+        <text class='tit'>入住日期</text>
+        <navigator class='choose' url='/pages/calendar/index'>
+            <input class='first' value='{{checkInDate}}'></input>
+            <view class="time">
+                <view class='line'></view>
+                <view class='days'>2晚</view>
+            </view>
+            <input class='first' value='{{checkOutDate}}'></input>
+        </navigator>
+        <view class='person'>
+          <text class='tit'>入住人数</text>
+          <view class='count'>
+              <view class='flex'>
+                  <text>成人</text>
+                  <text class='less' bindtap='dndn'>-</text>
+                  <text>{{numbers}}</text>
+                  <text class='plus' bindtap='upup'>+</text>
+              </view>
+              <view class='flex'>
+                  <text>儿童</text>
+                  <text class='less' bindtap='dndn1'>-</text>
+                  <text>{{number_two}}</text>
+                  <text class='plus' bindtap='upup1'>+</text>
+              </view>
+          </view>
+        </view>
+    </view>
+    <view class='middle'>
+        <view class='middle_top'>
+            <text>商圈</text>
+            <image src='{{down_red}}' class='down_red' bindtap='down_go'></image>
+        </view>
+        <view class='choose' >
+            <block wx:for="{{array}}" wx:key="item">
+              <view 
+              class='address' 
+              bindtap='click' 
+              style="color:{{item.m_id==currentItemId?'#f54d28':'#999'}};border-color:{{item.m_id==currentItemId?'#f54d28':'#999'}}" 
+              data-num="{{item.m_id}}">{{item.message}}</view>
+            </block>
+        </view>
+        <view class='middle_top'>
+            <text>房源类型</text>
+        </view>
+        <view class='choose'>
+            <block wx:for="{{array1}}" wx:key="item">
+              <view 
+              class='address' 
+              bindtap='click1' 
+              style="color:{{item.m_id==currentItemId1?'#f54d28':'#999'}};border-color:{{item.m_id==currentItemId1?'#f54d28':'#999'}}" 
+              data-num="{{item.m_id}}">{{item.message}}</view>
+            </block>
+        </view>
+        <view class='middle_top'>
+            <text>房源户型</text>
+        </view>
+        <view class='choose'>
+            <block wx:for="{{array2}}" wx:key="item">
+              <view 
+              class='address' 
+              bindtap='click2' 
+              style="color:{{item.m_id==currentItemId2?'#f54d28':'#999'}};border-color:{{item.m_id==currentItemId2?'#f54d28':'#999'}}" 
+              data-num="{{item.m_id}}">{{item.message}}</view>
+            </block>
+        </view>
+    </view>
+    <view class='top margin_top'>
+        <text class='tit'>每晚价格</text>
+        <view class='choose'>
+            <input class='first' placeholder='最低价' bindinput='smallprice' value="{{smallprice}}"></input>
+            <view class="time">
+                <view class='line'></view>
+            </view>
+            <input class='first' placeholder='最高价' bindinput='bigprice' value="{{bigprice}}"></input>
+        </view>
+    </view>
+</view>
+<view class='flex bottom'>
+  <view class='bottom_left' bindtap='chongzhi'>重置</view>
+  <view class='bottom_right' bindtap='letGo'>筛选</view>
+</view>
